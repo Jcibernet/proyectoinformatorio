@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def NICO(request):
+def inicio(request):
     return render(request, 'mi_html.html')
