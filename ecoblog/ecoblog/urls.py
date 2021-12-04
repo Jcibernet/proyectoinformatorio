@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('inicio/', views.inicio, name="vista_inicio")
+    path('', views.inicio, name="vista_inicio")
 ]
