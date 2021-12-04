@@ -1,7 +1,11 @@
 {%load static%}
 
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html lang="es">
+>>>>>>> bd7773d663ec8259adcd6a18a5e4223ea19b0819
 
     <!-- Basic -->
     <meta charset="utf-8">
@@ -24,7 +28,11 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
 
     <!-- Bootstrap core CSS -->
+
     <link href="{%static 'css/bootstrap.css'%}" rel="stylesheet">
+
+    <link href="{%static 'css/bootstrap.css' %}" rel="stylesheet">
+
 
     <!-- FontAwesome Icons core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -61,7 +69,9 @@
                     </button>
                     <a class="navbar-brand" href="tech-index.html">
                         <!-- <img src="images/version/tech-logo.png" alt=""> -->
+
                         <h1>ChiCala</h1>
+                        <img src="{%static 'img/logo.png'%}" alt="logo">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mr-auto">
@@ -447,11 +457,21 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
                             </li>
+<<<<<<< HEAD
+=======
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'auth:login' %}"> Iniciar sesión </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'auth:register' %}"> Registrarse </a>
+                            </li>
+>>>>>>> bd7773d663ec8259adcd6a18a5e4223ea19b0819
                         </ul>
                     </div>
                 </nav>
             </div><!-- end container-fluid -->
         </header><!-- end market-header -->
+<<<<<<< HEAD
         {%block contenido%}
         {%endblock contenido%}
 <footer class="footer">
@@ -522,5 +542,95 @@
             </div><!-- end container -->
         </footer><!-- end footer -->
         
+=======
+
+    </div>
+
+    {% block contenido %}
+
+    {% endblock contenido %}
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="widget">
+                        <div class="footer-text text-left">
+                            <a href="index.html"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
+                            <p>Tech Blog is a technology blog, we sharing marketing, news and gadget articles.</p>
+                            <div class="social">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+                            </div>
+
+                            <hr class="invis">
+
+                            <div class="newsletter-widget text-left">
+                                <form class="form-inline">
+                                    <input type="text" class="form-control" placeholder="Enter your email address">
+                                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                </form>
+                            </div><!-- end newsletter -->
+                        </div><!-- end footer-text -->
+                    </div><!-- end widget -->
+                </div><!-- end col -->
+
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                    <div class="widget">
+                        <h2 class="widget-title">Popular Categories</h2>
+                        <div class="link-widget">
+                            <ul>
+                                <li><a href="#">Marketing <span>(21)</span></a></li>
+                                <li><a href="#">SEO Service <span>(15)</span></a></li>
+                                <li><a href="#">Digital Agency <span>(31)</span></a></li>
+                                <li><a href="#">Make Money <span>(22)</span></a></li>
+                                <li><a href="#">Blogging <span>(66)</span></a></li>
+                            </ul>
+                        </div><!-- end link-widget -->
+                    </div><!-- end widget -->
+                </div><!-- end col -->
+
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                    <div class="widget">
+                        <h2 class="widget-title">Copyrights</h2>
+                        <div class="link-widget">
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Advertising</a></li>
+                                <li><a href="#">Write for us</a></li>
+                                <li><a href="#">Trademark</a></li>
+                                <li><a href="#">License & Help</a></li>
+                            </ul>
+                        </div><!-- end link-widget -->
+                    </div><!-- end widget -->
+                </div><!-- end col -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <br>
+                    <div class="copyright">&copy; Tech Blog. Design: <a href="http://html.design">HTML Design</a>.</div>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="dmtop">Scroll to Top</div>
+    
+</div><!-- end wrapper -->
+
+<!-- Core JavaScript
+================================================== -->
+<script src="{%static 'js/jquery.min.js'%}"></script>
+<script src="{%static 'js/tether.min.js'%}"></script>
+<script src="{%static 'js/bootstrap.min.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-editor/5.23.3/js/medium-editor.min.js"></script>
+<script src="{%static 'js/custom.js'%}"></script>
+
+>>>>>>> bd7773d663ec8259adcd6a18a5e4223ea19b0819
 </body>
 </html>
