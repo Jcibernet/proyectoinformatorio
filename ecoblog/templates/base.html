@@ -447,6 +447,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'auth:login' %}"> Iniciar sesión </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'auth:register' %}"> Registrarse </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -534,11 +540,11 @@
 
 <!-- Core JavaScript
 ================================================== -->
-<script src="js/jquery.min.js"></script>
-<script src="js/tether.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{%static 'js/jquery.min.js'%}"></script>
+<script src="{%static 'js/tether.min.js'%}"></script>
+<script src="{%static 'js/bootstrap.min.js'%}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-editor/5.23.3/js/medium-editor.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="{%static 'js/custom.js'%}"></script>
 
 </body>
 </html>
