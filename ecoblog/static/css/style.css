@@ -26,10 +26,13 @@
     color: #FFF;
 }
 
+<<<<<<< HEAD
+=======
 .navbar-brand img{
     width: 250px;
 }
 
+>>>>>>> bd7773d663ec8259adcd6a18a5e4223ea19b0819
 .top-images img{
     width: 100%;
 }
@@ -1685,6 +1688,8 @@ hr.invis3 {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%
+<<<<<<< HEAD
+=======
 }
 
 
@@ -1745,4 +1750,5 @@ section.formulario-login {
 
 .form-login a:hover {
 	text-decoration: underline;
+>>>>>>> bd7773d663ec8259adcd6a18a5e4223ea19b0819
 }
