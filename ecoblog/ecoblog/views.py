@@ -1,8 +1,14 @@
 from django.shortcuts import render
 
+from apps.posts.models import Post
+
 def inicio(request):
 
-    return render(request, 'tech-index.html')
 
-    return render(request, 'index.html')
+    posts = Post.objects.all()
+
+    ctx = {}
+    ctx['posteos'] = posts
+
+    return render(request, 'tech-index.html', ctx)
 

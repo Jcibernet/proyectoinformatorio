@@ -65,12 +65,12 @@
                     </button>
                     <a class="navbar-brand" href="{% url 'inicio' %}">
                         <!-- <img src="images/version/tech-logo.png" alt=""> -->
-                        <img src="{%static 'img/logo.png'%}" alt="logo">
+                        <img class="logo" src="{%static 'img/logo.png'%}" alt="logo">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-index.html">Home</a>
+                                <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
                             </li>
                             <li class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
@@ -450,7 +450,7 @@
                             {% if user.is_authenticated %}
 
                             <li class="nav-item">
-                                <span class="nav-link">Bienvenido, {{user.username}}!</span>
+                                <span class="nav-link text-capitalize">Bienvenido, {{user.username}}!</span>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> </a>

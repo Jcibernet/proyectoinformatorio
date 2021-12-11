@@ -26,13 +26,10 @@
     color: #FFF;
 }
 
-<<<<<<< HEAD
-=======
-.navbar-brand img{
+.logo{
     width: 250px;
 }
 
->>>>>>> bd7773d663ec8259adcd6a18a5e4223ea19b0819
 .top-images img{
     width: 100%;
 }
@@ -1688,8 +1685,6 @@ hr.invis3 {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%
-<<<<<<< HEAD
-=======
 }
 
 
@@ -1714,6 +1709,7 @@ section.formulario-login {
 	height: 4px;
 	margin-bottom: 30px;
 	font-size: 20px;
+    color: #fff;
 }
 
 .controls{
@@ -1724,6 +1720,7 @@ section.formulario-login {
 	background: #252323;
 	font-size: 14px;
 	font-weight: bold;
+    color: #fff;
 
 }
 
@@ -1734,6 +1731,14 @@ section.formulario-login {
 	border: none;
 	color: white;
 	margin-bottom: 16px;
+    cursor:pointer;
+    transition: all .3s ease;
+}
+
+.buttons:hover{
+    -webkit-box-shadow: 0px 10px 26px -6px rgba(0,0,0,0.46);
+-moz-box-shadow: 0px 10px 26px -6px rgba(0,0,0,0.46);
+box-shadow: 0px 10px 26px -6px rgba(0,0,0,0.46);
 }
 
 .form-login p{
@@ -1750,5 +1755,4 @@ section.formulario-login {
 
 .form-login a:hover {
 	text-decoration: underline;
->>>>>>> bd7773d663ec8259adcd6a18a5e4223ea19b0819
 }
