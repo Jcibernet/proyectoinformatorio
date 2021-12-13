@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+    {% for post in posteos %}
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-wrapper mt-5">
+                        <div class="blog-top clearfix">
+                            <h4 class="pull-left">Todos los posteos <a href="#"><i class="fa fa-rss"></i></a></h4>
+                        </div><!-- end blog-top -->
+                        <div class="blog-list clearfix">
+                            
+                            {% for post in posteos %}
+                            
+                            <div class="blog-box row">
+                                <div class="col-md-4">
+                                    <div class="post-media">
+                                        <a href="{% url 'posts:detalle_post' post.pk %}" title="">
+                                            <img src="{{post.imagen.url}}" alt="" class="img-fluid">
+                                            <div class="hovereffect"></div>
+                                        </a>
+                                    </div><!-- end media -->
+                                </div><!-- end col -->
+
+                                
+                                <div class="blog-meta big-meta col-md-8">
+                                    <h4><a href="{% url 'posts:detalle_post' post.pk %}" title="">{{post.titulo}} </a></h4>
+                                    <p>{{post.descripcion}}</p>
+                                    <small class="firstsmall"><a class="bg-orange" href="{% url 'posts:detalle_posts_ods' post.id_categoria.pk %}" title="">{{post.id_categoria}}</a></small>
+                                    <small><a href="{% url 'posts:detalle_post' post.pk %}" title="">{{post.fechaCreacion}}</a></small>
+                                    <small><a href="tech-author.html" title="">by Matilda</a></small>
+                                    <small><a href="{% url 'posts:detalle_post' post.pk %}" title=""><i class="fa fa-eye"></i> 1114</a></small>
+                                </div><!-- end meta -->
+                            </div><!-- end blog-box -->
+
+                            <hr class="invis">
+
+                            {% endfor %}
+
+                            <!-- SEPARADOR -->
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <div class="banner-spot clearfix">
+                                            <div class="banner-img">
+                                                <img src="" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+
+
+                        </div><!-- end blog-list -->
+                    </div><!-- end page-wrapper -->
+
+                    <hr class="invis">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-start">
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+
+    {% endfor %}
+
+{% endblock contenido %}
