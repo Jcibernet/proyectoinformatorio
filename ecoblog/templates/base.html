@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Site Metas -->
-    <title>Tech Blog - Stylish Magazine Blog Template</title>
+    <title>EcoBlog | Informatorio</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -79,13 +79,20 @@
                                     <li>
                                         <div class="container">
                                             <div class="mega-menu-content clearfix">
-                                                <div class="tab">
+                                                <div class="tab w-100 p-3">
 
                                                     {% getCategorias as categorias %}
 
-                                                    {% for categoria in categorias %}
-                                                        <a class="tablinks  d-block p-1" href="{% url 'posts:detalle_posts_ods' categoria.pk %}">{{categoria.nombre}}</a>
-                                                    {% endfor %}
+                                                    <div class="row">
+
+                                                            {% for categoria in categorias %}
+                                                                <div class="col-md-6">
+                                                                    <a class="tablinks  d-block p-1" href="{% url 'posts:detalle_posts_ods' categoria.pk %}"> <img class="rounded" src="{{categoria.imagen.url}}" width="30px">&nbsp; {{forloop.counter}}. {{categoria.nombre}}</a>
+                                                                </div>
+                                                            {% endfor %}
+
+                                                    </div>
+
                                                     <!-- <button class="tablinks active" onclick="openCategory(event, 'cat01')">Science</button> -->
                                                 </div>
 
@@ -110,7 +117,7 @@
 
                             {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a href="#" class="nav-link text-capitalize"><small>  <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp; Nuevo post</small> </a>
+                                <a href="{% url 'posts:nuevo_post'%}" class="nav-link text-capitalize"><small>  <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp; Nuevo post</small> </a>
                             </li>
                             <li class="nav-item">
                                 <span class="nav-link text-capitalize"> <small> Bienvenido, {{user.username}}! </small></span>
@@ -175,15 +182,16 @@
                             <h2 class="widget-title">Integrantes</h2>
                             <div class="link-widget">
                                 <ul>
-                                    <li><a href="#">Alejandro Chicala  <span>(P.M & Developer)</span> </a></li>
-                                    <li><a href="#">Ricardo Maidana <span>(Video & Developer)</span></a></li>
-                                    <li><a href="#">Florencia Galarza <span>(Developer)</span> </a></li>
-                                    <li><a href="#">Roberto Remis <span>(Developer)</span></a></li>
-                                    <li><a href="#">William Aquino <span>(Developer)</span></a></li>
+                                    <li><a href="#">-</span> </a></li>
+                                    <li><a href="#">-</span> </a></li>
+                                    <li><a href="#">-</span> </a></li>
+                                    <li><a href="#">-</span> </a></li>
+                                    <li><a href="#">-</span> </a></li>
+                                    <li><a href="#">-</span> </a></li>
                                 </ul>
-                            </div><!-- end link-widget -->
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                         <div class="widget">

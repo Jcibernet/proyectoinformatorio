@@ -5,7 +5,6 @@ from apps.posts.models import Categoria, Post
 
 def inicio(request):
 
-
     posts = Post.objects.all().order_by('-id')
 
     topTres = Post.objects.all().order_by('-id')[:3]
