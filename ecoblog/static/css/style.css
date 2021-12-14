@@ -654,6 +654,7 @@ div.tab button:hover {
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 323px;
 }
 
 .footer ul li {

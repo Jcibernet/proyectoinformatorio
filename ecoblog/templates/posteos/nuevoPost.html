@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block contenido%}
+
+<div class="custombox clearfix">
+    <h4 class="small-title">Dejá tu comentario acerca de este post, <span class="text-capitalize">{{user.username}}</span></h4>
+    <div class="row">
+        <div class="col-lg-12">
+
+            <form style="margin: 100px 0" class="form-wrapper" method="POST" enctype="multipart/form-data" >{% csrf_token %}
+                {{form.errors}}
+        
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary">Subir nuevo posteo</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+
+{%endblock contenido%}
