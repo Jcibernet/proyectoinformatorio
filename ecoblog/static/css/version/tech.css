@@ -173,6 +173,18 @@ h5 {
     background-color: #3b5998;
 }
 
+.github-button {
+    background-color: #525864;
+    transition: all .3s ease;
+}
+
+.github-button:hover {
+    background-color: #717680;
+    -webkit-box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.33);
+-moz-box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.33);
+box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.33);
+}
+
 .twitter-button {
     background-color: #1da1f2;
 }
@@ -286,6 +298,8 @@ a:focus {
     color: #ffffff !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important
+    /* background: rgba(0, 0, 0, 0) linear-gradient(to right, #f12711 0px, #f5af19 100%) repeat scroll 0 0 !important */
+    /* background: rgba(0, 0, 0, 0) linear-gradient(to left, #064206 0px, #0f9b0f 100%) repeat scroll 0 0 !important */
 }
 
 .gp-button.btn-primary:hover,

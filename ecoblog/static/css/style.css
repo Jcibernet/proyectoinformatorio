@@ -1769,18 +1769,27 @@ box-shadow: 0px 10px 26px -6px rgba(0,0,0,0.46);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.33);
 }
 
-.ods-filter h5,
-.ods-filter img{
+.widget-filter h5,
+.widget-filter img{
     transition: all .25s ease;
 }
 
-.ods-filter:hover h5{
+.widget-filter:hover h5{
     color: rgb(170, 170, 170);
 }
 
-.ods-filter:hover img{
+.widget-filter:hover img{
     opacity: 0.8;
     -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.33);
 -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.33);
 box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.33);
+transform: scale(1.05);
+}
+
+header li.nav-item{
+    border-radius: 5px;
+}
+
+header li.nav-item:hover{
+    background-color: rgb(0 119 255 / 82%);
 }

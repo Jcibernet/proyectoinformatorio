@@ -96,16 +96,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-01.html">Gadgets</a>
+                                <a class="nav-link" href="{% url 'posts:listar_posteos' %}">Posteos</a>
                             </li>                   
                             <li class="nav-item">
-                                <a class="nav-link" href="tech-category-02.html">Videos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="tech-category-03.html">Reviews</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="tech-contact.html">Contact Us</a>
+                                <a class="nav-link" href="tech-contact.html">Contacto</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav mr-2">
@@ -115,9 +109,11 @@
 
 
                             {% if user.is_authenticated %}
-
                             <li class="nav-item">
-                                <span class="nav-link text-capitalize">Bienvenido, {{user.username}}!</span>
+                                <a href="#" class="nav-link text-capitalize"><small>  <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp; Nuevo post</small> </a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link text-capitalize"> <small> Bienvenido, {{user.username}}! </small></span>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> </a>
@@ -139,6 +135,13 @@
         </header><!-- end market-header -->
         {%block contenido%}
         {%endblock contenido%}
+
+        <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 356.94,54.78 502.54,121.88 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(0, 0, 0);"></path></svg></div>
+
+        <!-- <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-230.52,232.41 C86.05,-21.19 409.42,-18.23 632.34,192.94 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(0, 0, 0);"></path></svg></div> -->
+
+        <!-- <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-3.67,123.86 C253.67,-5.41 254.22,-5.41 502.54,121.88 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(241, 15, 128);"></path></svg></div> -->
+        
     <footer class="footer">
             <div class="container">
                 <div class="row">

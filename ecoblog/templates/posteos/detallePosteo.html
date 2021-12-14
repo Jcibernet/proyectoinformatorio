@@ -19,8 +19,8 @@
                         <h3>{{posteo.titulo}}</h3>
 
                         <div class="blog-meta big-meta">
-                            <small><a href="tech-single.html" title="">{{posteo.fechaCreacion}}</a></small>
-                            <small><a href="#" title=""><i class="fa fa-eye"></i> 2344</a></small>
+                            <small><a href="#" title="">{{posteo.fechaCreacion}}</a></small>
+                            <small><a href="#" title=""><i class="fa fa-comment"></i> 1000</a></small>
                         </div><!-- end meta -->
 
                         <!-- <div class="post-sharing">
@@ -130,7 +130,7 @@
                             <div class="col-lg-12">
                                 <form class="form-wrapper">
                                     <textarea class="form-control" placeholder="Tu comentario..."></textarea>
-                                    <button type="submit" class="btn btn-primary">Submit Comment</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-comment"></i>&nbsp; Comentar</button>
                                 </form>
                             </div>
                         </div>
@@ -156,7 +156,7 @@
                         <div class="blog-list-widget">
                             <div class="list-group">
                                 {% for post in masPosts %}
-                                <a href="{% url 'posts:detalle_post' post.pk %}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <a href="{% url 'posts:detalle_post' post.pk %}" class="list-group-item list-group-item-action flex-column align-items-start widget-filter">
                                     <div class="w-100 justify-content-between">
                                         <img src="{{post.imagen.url}}" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">{{post.titulo}}</h5>
@@ -170,85 +170,44 @@
                     </div><!-- end widget -->
 
                     <div class="widget">
-                        <h2 class="widget-title">Recent Reviews</h2>
+                        <h2 class="widget-title">Todas las ODS</h2>
                         <div class="blog-list-widget">
                             <div class="list-group">
-                                <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                    <div class="w-100 justify-content-between">
-                                        <img src="upload/tech_blog_02.jpg" alt="" class="img-fluid float-left">
-                                        <h5 class="mb-1">Banana-chip chocolate cake recipe..</h5>
-                                        <span class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </span>
-                                    </div>
-                                </a>
+                                
+                                
+                                {% for ods in allOds %}
 
-                                <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                    <div class="w-100 justify-content-between">
-                                        <img src="upload/tech_blog_03.jpg" alt="" class="img-fluid float-left">
-                                        <h5 class="mb-1">10 practical ways to choose organic..</h5>
-                                        <span class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </span>
-                                    </div>
-                                </a>
+                                    <a href="{% url 'posts:detalle_posts_ods' ods.pk %}" class="list-group-item list-group-item-action flex-column align-items-start widget-filter">
+                                        <div class="w-100 justify-content-between">
+                                            <img src="{{ods.imagen.url}}" alt="" class="img-fluid float-left rounded">
+                                            <h5 class="mb-1">{{ods.nombre}}</h5>
+                                            <span class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                {% endfor %}
 
-                                <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                    <div class="w-100 last-item justify-content-between">
-                                        <img src="upload/tech_blog_07.jpg" alt="" class="img-fluid float-left">
-                                        <h5 class="mb-1">We are making homemade ravioli..</h5>
-                                        <span class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </span>
-                                    </div>
-                                </a>
+                                
                             </div>
                         </div><!-- end blog-list -->
                     </div><!-- end widget -->
 
                     <div class="widget">
-                        <h2 class="widget-title">Follow Us</h2>
+                        <h2 class="widget-title">Ver el proyecto en:</h2>
 
                         <div class="row text-center">
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                                <a href="#" class="social-button facebook-button">
-                                    <i class="fa fa-facebook"></i>
-                                    <p>27k</p>
+                                <a href="https://github.com/ChicalaAle/proyectoinformatorio" target="_blank" class="social-button github-button rounded ">
+                                    <i class="fa fa-github"></i>
+                                    <p>GitHub</p>
                                 </a>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                                <a href="#" class="social-button twitter-button">
-                                    <i class="fa fa-twitter"></i>
-                                    <p>98k</p>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                                <a href="#" class="social-button google-button">
-                                    <i class="fa fa-google-plus"></i>
-                                    <p>17k</p>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                                <a href="#" class="social-button youtube-button">
-                                    <i class="fa fa-youtube"></i>
-                                    <p>22k</p>
-                                </a>
-                            </div>
+                            </div>                            
                         </div>
                     </div><!-- end widget -->
 

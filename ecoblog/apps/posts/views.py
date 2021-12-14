@@ -25,6 +25,8 @@ def DetallePost(request, pk):
 
     items = list(Post.objects.filter(id_categoria = post.id_categoria))
 
+    ods = Categoria.objects.all().order_by('id')
+
     if len(items) == 1:
         topTres = random.sample(items, 1)
     elif len(items) == 2:
@@ -37,6 +39,7 @@ def DetallePost(request, pk):
 
     ctx['posteo'] = post
     ctx['masPosts'] = topTres
+    ctx['allOds'] = ods
 
     return render(request, 'posteos/detallePosteo.html', ctx)
 

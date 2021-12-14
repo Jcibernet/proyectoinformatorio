@@ -142,7 +142,7 @@
 
                                         {% for post in toptres %}
 
-                                        <a href="{% url 'posts:detalle_post' post.pk %}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <a href="{% url 'posts:detalle_post' post.pk %}" class="list-group-item list-group-item-action flex-column align-items-start widget-filter">
                                             <div class="w-100 justify-content-between">
                                                 <img src="{{post.imagen.url}}" alt="" class="img-fluid float-left">
                                                 <h5 class="mb-1">{{post.titulo}}</h5>
@@ -163,7 +163,7 @@
 
                                         {% for ods in allOds %}
 
-                                        <a href="{% url 'posts:detalle_posts_ods' ods.pk %}" class="list-group-item list-group-item-action flex-column align-items-start ods-filter">
+                                        <a href="{% url 'posts:detalle_posts_ods' ods.pk %}" class="list-group-item list-group-item-action flex-column align-items-start widget-filter">
                                             <div class="w-100 justify-content-between">
                                                 <img src="{{ods.imagen.url}}" alt="" class="img-fluid float-left rounded">
                                                 <h5 class="mb-1">{{ods.nombre}}</h5>
