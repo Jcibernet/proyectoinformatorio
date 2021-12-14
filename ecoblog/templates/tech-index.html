@@ -157,41 +157,16 @@
                             </div><!-- end widget -->
 
                             <div class="widget">
-                                <h2 class="widget-title">Recent Reviews</h2>
+                                <h2 class="widget-title">Todas las ODS:</h2>
                                 <div class="blog-list-widget">
                                     <div class="list-group">
-                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                            <div class="w-100 justify-content-between">
-                                                <img src="https://picsum.photos/id/240/600/500" alt="" class="img-fluid float-left">
-                                                <h5 class="mb-1">Banana-chip chocolate cake recipe..</h5>
-                                                <span class="rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </span>
-                                            </div>
-                                        </a>
 
-                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                            <div class="w-100 justify-content-between">
-                                                <img src="https://picsum.photos/id/240/600/500" alt="" class="img-fluid float-left">
-                                                <h5 class="mb-1">10 practical ways to choose organic..</h5>
-                                                <span class="rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </span>
-                                            </div>
-                                        </a>
+                                        {% for ods in allOds %}
 
-                                        <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                            <div class="w-100 last-item justify-content-between">
-                                                <img src="https://picsum.photos/id/240/600/500" alt="" class="img-fluid float-left">
-                                                <h5 class="mb-1">We are making homemade ravioli..</h5>
+                                        <a href="{% url 'posts:detalle_posts_ods' ods.pk %}" class="list-group-item list-group-item-action flex-column align-items-start ods-filter">
+                                            <div class="w-100 justify-content-between">
+                                                <img src="{{ods.imagen.url}}" alt="" class="img-fluid float-left rounded">
+                                                <h5 class="mb-1">{{ods.nombre}}</h5>
                                                 <span class="rating">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
@@ -201,6 +176,10 @@
                                                 </span>
                                             </div>
                                         </a>
+                                        
+                                        {% endfor %}
+
+                                        
                                     </div>
                                 </div><!-- end blog-list -->
                             </div><!-- end widget -->
