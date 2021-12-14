@@ -10,7 +10,9 @@
             <div class="container-fluid">
                 <div class="masonry-blog clearfix">
 
-                    
+                    {% for post in posteos%}
+                    <p>{{post.0}}</p>
+                    {% endfor %}
                     
                     <div class="first-slot slot">
                         <div class="masonry-box post-media">
