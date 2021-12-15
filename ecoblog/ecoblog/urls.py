@@ -27,6 +27,7 @@ urlpatterns = [
     path('', views.inicio, name="inicio"),
     path('posteos/', include('apps.posts.urls')),
     path('login/', auth.LoginView.as_view(template_name="auth/login.html"), name='login'),
-    path('logout/', auth.LogoutView.as_view(), name='logout')
+    path('logout/', auth.LogoutView.as_view(), name='logout'),
+    path('usuarios/', include('apps.usuarios.urls'))
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

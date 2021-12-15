@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
 
 {% block contenido %}
-
-    <section class="form-login formulario-login">
+<form method="POST">{% csrf_token %}
+    <section class="mt-5">
         <h5>Registro</h5>
-        <input class="controls" type="text" name="usuario" value="" placeholder="Nombre">
-        <input class="controls" type="text" name="usuario" value="" placeholder="Apellido">
-        <input class="controls" type="text" name="usuario" value="" placeholder="Email">
-        <input class="controls" type="text" name="usuario" value="" placeholder="usuario">
-        <input class="controls" type="password" name="contraseña" value="" placeholder="contraseña">
+        
+        {{form.as_p}}
         <input class="buttons" type="submit" name="" value="ingresar">
         <p><a href="#">¿olvidaste tu contraseña?</a></p>
     </section>
+    </form>
 
 {% endblock contenido %}
