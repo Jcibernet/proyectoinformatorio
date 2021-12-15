@@ -130,7 +130,7 @@
                                     <a class="nav-link" href="{% url 'login' %}"> Iniciar sesión </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href=""> Registrarse </a>
+                                    <a class="nav-link" href="{% url 'usuarios:registrar' %}"> Registrarse </a>
                                 </li>
                             {% endif %}
 
@@ -155,14 +155,10 @@
                     <div class="col-lg-7">
                         <div class="widget">
                             <div class="footer-text text-left">
-                                <a href="index.html"><img src="{%static 'img/logo.png'%}" alt="" class="img-fluid"></a>
+                                <a href="{% url 'inicio' %}"><img src="{%static 'img/logo.png'%}" alt="" class="img-fluid"></a>
                                 <p>Eco Blog permite la difusión, visibilización y debate sobre iniciativas que contribuyan al cumplimiento de los 17 Objetivos de Desarrollo Sostenible (17 ODS) incluidos en la Agenda 2030 de la ONU.</p>
                                 <div class="social">
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-globe" aria-hidden="true"></i> www.ecoblog.com</a>
                                 </div>
 
                                 <hr class="invis">
@@ -182,12 +178,12 @@
                             <h2 class="widget-title">Integrantes</h2>
                             <div class="link-widget">
                                 <ul>
-                                    <li><a href="#">-</span> </a></li>
-                                    <li><a href="#">-</span> </a></li>
-                                    <li><a href="#">-</span> </a></li>
-                                    <li><a href="#">-</span> </a></li>
-                                    <li><a href="#">-</span> </a></li>
-                                    <li><a href="#">-</span> </a></li>
+                                    <li><a href="https://www.linkedin.com/in/alechicala/" target="_blank" >Alejandro Chicala <span>(P.M & Dev)</span> </a></li>
+                                    <li><a href="https://www.instagram.com/flor_galarza_/" target="_blank" >Florencia Galarza <span>(Video & Dev)</span> </a></li>
+                                    <li><a href="#" target="_blank" >Ricardo Maidana <span>(Video & Dev)</span> </a></li>
+                                    <li><a href="https://www.linkedin.com/in/campiasjuan/" target="_blank" >Juan Campias <span>(Guión & Dev)</span> </a></li>
+                                    <li><a href="#" target="_blank" >William Aquino <span>(Guión & Dev)</span> </a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=5493624066512&text=Hola, *Roberto Marsuzzi* vi tu proyecto del informatorio Ecoblog" target="_blank" >Roberto Marsuzzi <span>(Dev)</span> </a></li>
                                 </ul>
                             </div>
                         </div>

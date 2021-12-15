@@ -8,5 +8,4 @@ app_name='usuarios'
 
 urlpatterns = [
 	path('registrar', RegistroUsuario.as_view(),name="registrar")
-
 ]

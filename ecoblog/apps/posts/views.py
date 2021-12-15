@@ -1,12 +1,15 @@
-from django.shortcuts import render
+from django.http.response import HttpResponseRedirect
+from django.shortcuts import redirect, render
 
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
+
+from apps.usuarios.models import Usuario
 from .forms import Formulario_nuevo_post
 
 import random
 
-from .models import Post, Categoria
+from .models import Comentario, Post, Categoria
 
 # Create your views here.
 def ListarPosteos(request):
@@ -19,9 +22,26 @@ def ListarPosteos(request):
     
     return render(request, 'posteos/listarPosteos.html', ctx)
 
+
+def ComentarPost(request, pk, user):
+
+    user = Usuario.objects.get(pk = user)
+
+    post = Post.objects.get(pk = pk)
+
+    comment = Comentario()
+    comment.setUsuario(user)
+    comment.setCuerpo(request.POST.get('comentario'))
+    comment.setPost(post)
+    comment.save()
+
+    return redirect('posts:detalle_post', pk = pk)
+
 def DetallePost(request, pk):
 
     post = Post.objects.get(pk = pk)
+
+    comentarios = Comentario.objects.filter(post = pk)
 
     items = list(Post.objects.filter(id_categoria = post.id_categoria))
 
@@ -40,6 +60,7 @@ def DetallePost(request, pk):
     ctx['posteo'] = post
     ctx['masPosts'] = topTres
     ctx['allOds'] = ods
+    ctx['comentarios'] = comentarios
 
     return render(request, 'posteos/detallePosteo.html', ctx)
 
@@ -54,9 +75,20 @@ def PostSobreODS(request, pk):
     return render(request, 'posteos/posteosPorODS.html', ctx)
 
 
+    # return render(request, 'posteos/detallePosteo.html')
+    
+
+    # comentario = request.POST.get('comentario')
+
+    # print(type(comentario))
+
+    # comment = Comentario.objects.create()
+    # print()
+
+
 class NuevoPost(CreateView):
 
     model = 'Post'
     template_name = 'posteos/nuevoPost.html'
     form_class = Formulario_nuevo_post
-    success_url = reverse_lazy('posts:listar_posteos')
+    success_url = reverse_lazy('inicio')

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-from apps.posts.models import Categoria, Post
+from apps.posts.models import Categoria, Comentario, Post
 
 def inicio(request):
 
@@ -11,10 +11,15 @@ def inicio(request):
 
     ods = Categoria.objects.all().order_by('id')
 
+    comentarios = Comentario.objects.all()
+
+
+    
     ctx = {}
     ctx['posteos'] = posts
     ctx['toptres'] = topTres
     ctx['allOds'] = ods
-
+    ctx['comentarios'] = comentarios
+    
     return render(request, 'tech-index.html', ctx)
 
