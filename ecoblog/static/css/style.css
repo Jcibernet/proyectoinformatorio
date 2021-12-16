@@ -1813,3 +1813,17 @@ header li.nav-item:hover{
 .last-slot img{
     height: 500px!important;
 }
+
+
+
+
+/* ESTILOS PARA FORMULARIO DE NUEVO POST */
+
+
+.nuevo-post {
+    text-align: center;
+}
+
+/* ESTILOS PARA FORMULARIO DE REGISTRO */
+
+/* .... */
