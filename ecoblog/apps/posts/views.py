@@ -61,6 +61,7 @@ def DetallePost(request, pk):
     ctx['masPosts'] = topTres
     ctx['allOds'] = ods
     ctx['comentarios'] = comentarios
+    ctx['url'] = f"https://web.whatsapp.com/send?text=http%3A%2F%2F127.0.0.1:8000%2Fposteos%2F{post.pk}"
 
     return render(request, 'posteos/detallePosteo.html', ctx)
 
