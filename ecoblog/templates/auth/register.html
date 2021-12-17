@@ -2,12 +2,12 @@
 
 {% block contenido %}
 <form method="POST">{% csrf_token %}
-    <section class="mt-5">
-        <h5>Registro</h5>
+    <section  class="mt-5" class="datos">
+        <h5 class="usuario-registro"> <br> Registro</h5>
         
         {{form.as_p}}
-        <input class="buttons" type="submit" name="" value="ingresar">
-        <p><a href="#">¿olvidaste tu contraseña?</a></p>
+        <input  class="buttons" type="submit" name="" value="ingresar">
+        <p><a href="#" class="datos" >¿olvidaste tu contraseña?</a></p>
     </section>
     </form>
 

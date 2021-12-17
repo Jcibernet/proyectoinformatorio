@@ -85,6 +85,8 @@ def PostSobreODS(request, pk):
     # comment = Comentario.objects.create()
     # print()
 
+ 
+        
 
 class NuevoPost(CreateView):
 
