@@ -3,11 +3,41 @@
 {% block contenido %}
 <form method="POST">{% csrf_token %}
     <section  class="mt-5" class="datos">
-        <h5 class="usuario-registro"> <br> Registro</h5>
+        {% if form.errors %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                Hubo un error con tu formulario...
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="CLose"></button>
+            </div>
+        {% endif %}
+        <h3 class="usuario-registro"> <br> Registro</h3>
         
-        {{form.as_p}}
-        <input  class="buttons" type="submit" name="" value="ingresar">
-        <p><a href="#" class="datos" >¿olvidaste tu contraseña?</a></p>
+        
+            <div class="shadow p-4 mb-5 bg-body rounded">
+            <div class="form-group">
+                <label>Nombre de Usuario</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label>Direccion de Email</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label>Contraseña</label>
+                {{ form.password1 }}
+            </div>
+            <div class="form-group">
+                <label>Confirmar Contraseña</label>
+                {{ form.password2 }}
+            </div>
+            <br>
+            
+            
+            <input class="buttons" type="submit" name="" value="Registrarse">
+            <br>
+            
+            <p><a href="{% url 'login' %}">¿Ya tengo cuenta?</a></p>
+        
+        
     </section>
     </form>
 
