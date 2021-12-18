@@ -2,8 +2,8 @@
 
 {% block contenido %}
 <h3 class="usuario-registro mt-5 pt-4">Registro</h3>
-<form class="text-center register-form" method="POST">{% csrf_token %}
-    <section  class="mt-5 text-center" class="datos">
+<form class="register-form" method="POST">{% csrf_token %}
+    <section  class="mt-5" class="datos">
         {% if form.errors %}
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 Hubo un error con tu formulario...
@@ -36,7 +36,7 @@
             <input class="buttons" type="submit" name="" value="Registrarse">
             <br>
             
-            <p><a href="{% url 'login' %}">Ya tengo cuenta</a></p>
+            <p class="text-center"><a href="{% url 'login' %}">Ya tengo cuenta</a></p>
         
         
     </section>
