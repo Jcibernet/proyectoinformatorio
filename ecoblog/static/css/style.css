@@ -1873,9 +1873,9 @@ header li.nav-item:hover{
 }
 
 .register-form {
-    /* background-color: red; */
     width: 50%;
-    margin: 0 auto;    display:flex;
+    margin: 0 auto;
+    display:flex;
     justify-content: center;
     align-items: center;
   
