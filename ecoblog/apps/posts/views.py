@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from apps.usuarios.models import Usuario
 from .forms import Formulario_nuevo_post
 
+
 import random
 
 from .models import Comentario, Post, Categoria
@@ -61,6 +62,8 @@ def DetallePost(request, pk):
     ctx['masPosts'] = topTres
     ctx['allOds'] = ods
     ctx['comentarios'] = comentarios
+    ctx['url'] = request
+    # ctx['url'] = f"https://web.whatsapp.com/send?text=http%3A%2F%2F{request.get_host}%2Fposteos%2F{post.pk}"
 
     return render(request, 'posteos/detallePosteo.html', ctx)
 
@@ -85,6 +88,8 @@ def PostSobreODS(request, pk):
     # comment = Comentario.objects.create()
     # print()
 
+ 
+        
 
 class NuevoPost(CreateView):
 

@@ -890,8 +890,8 @@ box-shadow: 0px 1px 13px 2px rgba(0,0,0,0.26);
 .fb-button.btn-primary:focus,
 .fb-button.btn-primary:hover,
 .fb-button.btn-primary {
-    background-color: #3B5998 !important;
-    border-color: #3B5998 !important;
+    background-color: #075E54 !important;
+    border-color: #075E54 !important;
 }
 
 .tw-button.btn-primary:hover,
@@ -1825,5 +1825,63 @@ header li.nav-item:hover{
 }
 
 /* ESTILOS PARA FORMULARIO DE REGISTRO */
+
+
+  
+.usuario-registro {
+    
+    text-align: center;
+    width: 100%;
+    border: 1px solid #017bab;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+
+.usuario-datos{
+    width: 100%;
+    border: 1px solid #017bab;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #017bab;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.datos {
+    width: 50px;
+    height: 50px;
+    background: #017bab;
+    margin: 12px auto;
+    box-shadow: 7px 13px 37px #000;
+    padding: 9px 8px;
+    border-top: 4px solid #000;
+    color: white;
+
+}
+
+.buttons {
+    width: 300px;
+
+}
+
+.register-form {
+    width: 50%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+    }  
+
+
 
 /* .... */
