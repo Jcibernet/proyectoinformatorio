@@ -1,1 +1,1 @@
-web: gunicorn ecoblog.wsgi --log-file -
+web: gunicorn django_project.wsgi:application
