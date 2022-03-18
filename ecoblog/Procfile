@@ -1,1 +1,0 @@
-web: gunicorn ecoblog.ecoblog.wsgi --log-file -
