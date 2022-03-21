@@ -1,1 +1,1 @@
-web: gunicorn ecoblog.wsgi:application --log-file - --log-level debug
+web: gunicorn ecoblog.wsgi --log-file - 
